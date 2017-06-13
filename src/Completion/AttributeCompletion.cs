@@ -21,7 +21,7 @@ namespace GoogleAmpSchema
             string tagName = context.Element.Name.ToLowerInvariant();
 
             // Bail if the document isn't AMP or unknown unless the element starts with "amp-"
-            if (!tagName.StartsWith("amp-", System.StringComparison.OrdinalIgnoreCase))
+            if (tagName != "html" && !tagName.StartsWith("amp-", System.StringComparison.OrdinalIgnoreCase))
             {
                 if (context.Element.GetDocMode() == DocMode.HTML)
                     return list;
