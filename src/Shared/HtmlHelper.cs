@@ -30,23 +30,6 @@ namespace GoogleAmpSchema
 
             return DocMode.Unknown;
         }
-
-        public static ElementNode GetHtml(this ElementNode element)
-        {
-            var parent = element;
-
-            while(parent != null)
-            {
-                if (parent.Name == "html")
-                {
-                    return parent;
-                }
-
-                parent = parent.Parent;
-            }
-
-            return null;
-        }
     }
 
     public enum DocMode

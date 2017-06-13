@@ -2,8 +2,6 @@
 
 - [ ] Add missing descriptions to attributes
 - [ ] More validation rules
-- [x] Validation for `<style>` elements
-- [x] Only show Intellisense when `<html amp>` is present
 
 Features that have a checkmark are complete and available for
 download in the
@@ -13,6 +11,11 @@ download in the
 
 These are the changes to each version that has been released
 on the official Visual Studio extension gallery.
+
+## 1.1
+
+- [x] Validation for `<style>` elements
+- [x] Only show Intellisense when `<html amp>` is present
 
 ## 1.0
 

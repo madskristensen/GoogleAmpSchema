@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="89e66607-5b1d-43a4-8da0-286801f8f60a" Version="1.0" Language="en-US" Publisher="Mads Kristensen" />
+        <Identity Id="89e66607-5b1d-43a4-8da0-286801f8f60a" Version="1.1" Language="en-US" Publisher="Mads Kristensen" />
         <DisplayName>Google AMP Tools</DisplayName>
         <Description xml:space="preserve">The AMP Project is an open-source initiative aiming to make the web better for all. The project enables the creation of websites and ads that are consistently fast, beautiful and high-performing across devices and distribution platforms.</Description>
         <MoreInfo>https://github.com/madskristensen/GoogleAmpSchema</MoreInfo>
