@@ -2,8 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/wxwvgdhju80hrx84?svg=true)](https://ci.appveyor.com/project/madskristensen/googleampschema)
 
-<!-- Update the VS Gallery link after you upload the VSIX-->
-Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/[GuidFromGallery])
+Download this extension from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.GoogleAMPTools)
 or get the [CI build](http://vsixgallery.com/extension/89e66607-5b1d-43a4-8da0-286801f8f60a/).
 
 ---------------------------------------

@@ -4,9 +4,12 @@
         <Identity Id="89e66607-5b1d-43a4-8da0-286801f8f60a" Version="1.0" Language="en-US" Publisher="Mads Kristensen" />
         <DisplayName>Google AMP Tools</DisplayName>
         <Description xml:space="preserve">The AMP Project is an open-source initiative aiming to make the web better for all. The project enables the creation of websites and ads that are consistently fast, beautiful and high-performing across devices and distribution platforms.</Description>
+        <MoreInfo>https://github.com/madskristensen/GoogleAmpSchema</MoreInfo>
         <License>Resources\LICENSE</License>
+        <ReleaseNotes>https://github.com/madskristensen/GoogleAmpSchema/blob/master/CHANGELOG.md</ReleaseNotes>
         <Icon>Resources\Icon.png</Icon>
         <PreviewImage>Resources\Icon.png</PreviewImage>
+        <Tags>Google, AMP, HTML</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="15.0" />

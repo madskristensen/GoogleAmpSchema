@@ -11,11 +11,74 @@
     ]
   },
   {
+    "name": "html",
+    "type": "existing",
+    "attributes": [
+      { "name": "amp" },
+      { "name": "⚡" }
+    ]
+  },
+  {
     "name": "script",
     "type": "existing",
     "attributes": [
-      { "name": "custom-element" },
-      { "name": "custom-template" }
+      {
+        "name": "custom-element",
+        "values": [
+          "amp-access",
+          "amp-accordion",
+          "amp-ad",
+          "amp-analytics",
+          "amp-anim",
+          "amp-audio",
+          "amp-brid-player",
+          "amp-brightcove",
+          "amp-carousel",
+          "amp-dailymotion",
+          "amp-dynamic-css-classes",
+          "amp-embed",
+          "amp-experiment",
+          "amp-facebook",
+          "amp-facebook-comments",
+          "amp-fit-text",
+          "amp-font",
+          "amp-form",
+          "amp-fx-flying-carpet",
+          "amp-gfycat",
+          "amp-gfycat",
+          "amp-iframe",
+          "amp-image-lightbox",
+          "amp-instagram",
+          "amp-install-serviceworker",
+          "amp-izlesene",
+          "amp-jwplayer",
+          "amp-kaltura-player",
+          "amp-lightbox",
+          "amp-list",
+          "amp-live-list",
+          "amp-mustache",
+          "amp-o2-player",
+          "amp-ooyala-player",
+          "amp-pinterest",
+          "amp-reach-player",
+          "amp-reddit",
+          "amp-sidebar",
+          "amp-social-share",
+          "amp-soundcloud",
+          "amp-springboard-player",
+          "amp-sticky-ad",
+          "amp-twitter",
+          "amp-user-notification",
+          "amp-vimeo",
+          "amp-vine",
+          "amp-vine",
+          "amp-youtube"
+        ]
+      },
+      {
+        "name": "custom-template",
+        "values": [ "amp-mustache" ]
+      }
     ]
   },
   {

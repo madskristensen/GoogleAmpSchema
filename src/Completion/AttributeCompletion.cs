@@ -20,6 +20,13 @@ namespace GoogleAmpSchema
             var list = new List<HtmlCompletion>();
             string tagName = context.Element.Name.ToLowerInvariant();
 
+            // Bail if the document isn't AMP or unknown unless the element starts with "amp-"
+            if (!tagName.StartsWith("amp-", System.StringComparison.OrdinalIgnoreCase))
+            {
+                if (context.Element.GetDocMode() == DocMode.HTML)
+                    return list;
+            }
+
             var all = HtmlCache.Elements.Single(e => e.Name == "*").Attributes.ToList();
 
             HtmlElement element = HtmlCache.Elements.SingleOrDefault(e => e.Name == tagName);

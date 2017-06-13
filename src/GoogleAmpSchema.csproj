@@ -56,6 +56,8 @@
     <Compile Include="Schema\HtmlCache.cs" />
     <Compile Include="Schema\HtmlElement.cs" />
     <Compile Include="Schema\IHtmlItem.cs" />
+    <Compile Include="Shared\HtmlHelper.cs" />
+    <Compile Include="Validation\StyleValidator.cs" />
     <Compile Include="Validation\AttributeValidator.cs" />
   </ItemGroup>
   <ItemGroup>

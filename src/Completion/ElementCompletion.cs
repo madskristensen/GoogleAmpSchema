@@ -17,7 +17,12 @@ namespace GoogleAmpSchema
 
         public override IList<HtmlCompletion> GetEntries(HtmlCompletionContext context)
         {
-            return AddEntries(context, HtmlCache.Elements.Where(elem => elem.Type != "existing"));
+            if (context.Element.GetDocMode() != DocMode.HTML)
+            {
+                return AddEntries(context, HtmlCache.Elements.Where(elem => elem.Type != "existing"));
+            }
+
+            return new List<HtmlCompletion>();
         }
     }
 }
