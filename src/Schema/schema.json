@@ -1,0 +1,702 @@
+﻿// Get list here http://ionicframework.com/docs/api/directive/ionList/
+[
+  {
+    "name": "*",
+    "type": "existing",
+    "attributes": [
+      {
+        "name": "fallback",
+        "description": "A fallback is a convention that allows the element to communicate to the reader that the browser does not support the element or that loading the underlying resource failed. The fallback attribute can be placed on any HTML element that is a direct child of an AMP element that supports fallbacks."
+      }
+    ]
+  },
+  {
+    "name": "script",
+    "type": "existing",
+    "attributes": [
+      { "name": "custom-element" },
+      { "name": "custom-template" }
+    ]
+  },
+  {
+    "name": "style",
+    "type": "existing",
+    "attributes": [
+      { "name": "amp-custom" },
+      { "name": "amp-boilerplate" }
+    ]
+  },
+  {
+    "name": "_common_",
+    "type": "existing",
+    "attributes": [
+      {
+        "name": "width"
+      },
+      {
+        "name": "height"
+      },
+      {
+        "name": "heights",
+        "description": "All AMP elements that support the responsive layout, also support the heights attribute."
+      },
+      {
+        "name": "noloading",
+        "description": "The noloading attribute indicates whether the \"loading indicator\" should be turned off for this element. Many AMP elements show a \"loading indicator\", which is a basic animation that shows that the element has not yet fully loaded."
+      },
+      {
+        "name": "sizes",
+        "description": "All AMP elements that support the responsive layout, also support the sizes attribute. The value of the sizes attribute is a sizes expression as described in the sizes attribute on img tags, but extended to all elements, not just images."
+      },
+      {
+        "name": "media",
+        "description": "This attribute can be used on every AMP element; it works similar to media queries in your global stylesheet, but only impacts the specific element on a single page."
+      },
+      {
+        "name": "layout",
+        "description": "AMP provides a set of layouts that specify how an AMP component behaves in the document layout. You can specify a layout for a component by adding the layout attribute with one of the supported layout values for the element (see the element's documentation for what values are supported).",
+        "type": "enum",
+        "values": [ "nodisplay", "responsive", "fixed-height", "fill", "container", "flex-item" ]
+      },
+      {
+        "name": "on",
+        "description": "The \"on\" attribute is used to install event handlers on elements. The events that are supported depend on the element.",
+        "type": "expression"
+      },
+      {
+        "name": "placeholder",
+        "description": "The placeholder attribute indicates that the element marked with this attribute acts as a placeholder for the parent AMP element. The attribute can be placed on any HTML element that is a direct child of an AMP element that supports placeholders.",
+        "type": "expression"
+      },
+      {
+        "name": "sizes",
+        "description": "All AMP elements that support the responsive layout, also support the sizes attribute. The value of the sizes attribute is a sizes expression as described in the sizes attribute on img tags, but extended to all elements, not just images.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "button",
+    "type": "existing",
+    "attributes": [
+      {
+        "name": "open-button",
+        "description": "The click target for the banner to install the app, or open the deep-link if the app is already installed."
+      }
+    ]
+  },
+  {
+    "name": "amp-ad",
+    "description": "A container to display an ad.",
+    "attributes": [
+      {
+        "name": "type",
+        "description": "Specifies an identifier for the ad network. The type attribute selects the template to use for the ad tag.",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "json",
+        "description": "Use this attribute to pass a configuration to the ad as an arbitrarily complex JSON object. The object is passed to the ad as-is with no mangling done on the names.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "amp-analytics",
+    "description": "Captures analytics data from an AMP document.",
+    "attributes": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "config",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "amp-auto-ads",
+    "description": "Dynamically injects ads into an AMP page by using a remotely-served configuration file.",
+    "attributes": [
+      {
+        "name": "type",
+        "description": "An identifier for the ad network.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "amp-call-tracking",
+    "description": "Dynamically replaces a phone number in a hyperlink to enable call tracking.",
+    "attributes": [
+      {
+        "name": "config",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "amp-experiment",
+    "description": "Conduct user experience experiments on an AMP document and collect corresponding data with amp-pixel or amp-analytics."
+  },
+  {
+    "name": "amp-pixel",
+    "description": "The amp-pixel element is meant to be used as a typical tracking pixel - to count page views.",
+    "attributes": [
+      {
+        "name": "src",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "referrerpolicy",
+        "type": "enum",
+        "values": [ "no-referrer" ]
+      }
+    ]
+  },
+  {
+    "name": "amp-sticky-ad",
+    "description": "Provides a way to fix an ad to the bottom of a page. The sticky-ad serves as a container, with the ad as its child.",
+    "attributes": [
+      {
+        "name": "layout",
+        "type": "enum",
+        "values": [ "nodisplay" ],
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "amp-gist",
+    "description": "Displays a GitHub Gist.",
+    "attributes": [
+      {
+        "name": "data-gistid",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data-file",
+        "type": "string"
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "layout",
+        "type": "enum",
+        "values": [ "fixed-height" ],
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "amp-install-serviceworker",
+    "description": "Installs a ServiceWorker for the current page",
+    "attributes": [
+      {
+        "name": "src",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data-iframe-src",
+        "type": "string"
+      },
+      {
+        "name": "layout",
+        "type": "enum",
+        "values": [ "nodisplay" ]
+      }
+    ]
+  },
+  {
+    "name": "amp-list",
+    "description": "Fetches content dynamically from a CORS JSON endpoint and renders it using a supplied template.",
+    "attributes": [
+      {
+        "name": "src",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "credentials",
+        "type": "enum",
+        "values": [ "omit", "include" ]
+      },
+      {
+        "name": "items",
+        "type": "expression"
+      }
+    ]
+  },
+  {
+    "name": "amp-live-list",
+    "description": "A wrapper and minimal UI for content that updates live in the client instance as new content is available in the source document.",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data-max-items-per-page",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "disabled",
+        "type": "enum",
+        "values": [ "disabled" ]
+      }
+    ]
+  },
+  {
+    "name": "amp-accordian",
+    "description": "Provides a way for viewers to glance at the content outline and jump to any section. This is helpful for mobile devices where even a couple of sentences into a section requires scrolling.",
+    "attributes": [
+      {
+        "name": "disable-session-states",
+        "description": "Set this attribute on the <amp-accordion> to opt out of preserving the collapsed/expanded state of the accordion."
+      }
+    ]
+  },
+  {
+    "name": "amp-app-banner",
+    "description": "A wrapper and minimal UI for a cross-platform, fixed-position banner showing a call-to-action to install an app. Includes conditional logic to direct to the right app on the right platform, and to hide permanently if the user dismisses the banner.",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "layout",
+        "type": "enum",
+        "values": [ "nodisplay" ],
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "amp-carousel",
+    "description": "A generic carousel for displaying multiple similar pieces of content along a horizontal axis; meant to be highly flexible and performant.",
+    "attributes": [
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [ "carousel", "slides" ]
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "controls"
+      },
+      {
+        "name": "autoplay"
+      },
+      {
+        "name": "delay",
+        "type": "number"
+      },
+      {
+        "name": "loop"
+      }
+    ]
+  },
+  {
+    "name": "amp-fx-flying-carpet",
+    "description": "A flying carpet wraps its children in a unique full-screen scrolling container. In particular, this allows you to display a full-screen ad without taking up the entire viewport, making for a better user experience.",
+    "attributes": [
+      {
+        "name": "height",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "amp-iframe",
+    "description": "Displays an iframe.",
+    "attributes": [
+      {
+        "name": "src",
+        "type": "string"
+      },
+      {
+        "name": "srcdoc",
+        "type": "string"
+      },
+      {
+        "name": "frameborder",
+        "type": "number"
+      },
+      {
+        "name": "allowfullscreen"
+      },
+      {
+        "name": "allowpaymentrequest"
+      },
+      {
+        "name": "allowtransparency"
+      },
+      {
+        "name": "referrerpolicy"
+      },
+      {
+        "name": "sandbox"
+      },
+      {
+        "name": "width",
+        "type": "number"
+      },
+      {
+        "name": "height",
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "name": "amp-lightbox",
+    "description": "Allows for a \"lightbox\" or similar experience where upon user interaction, a component expands to fill the viewport until it is closed again by the user.",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "layout",
+        "type": "enum",
+        "values": [ "nodisplay" ]
+      },
+      {
+        "name": "scrollable"
+      }
+    ]
+  },
+  {
+    "name": "amp-img",
+    "description": "A runtime-managed replacement for the HTML img tag.",
+    "attributes": [
+      {
+        "name": "amp-fx-parallax",
+        "type": "number"
+      },
+      { "name": "src" },
+      { "name": "srcset" },
+      { "name": "alt" },
+      { "name": "attribution" },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-sidebar",
+    "description": "A sidebar provides a way to display meta content intended for temporary access (navigation links, buttons, menus, etc.).The sidebar can be revealed by a button tap while the main content remains visually underneath.",
+    "attributes": [
+      {
+        "name": "side",
+        "type": "enum",
+        "values": [ "left", "right" ]
+      },
+      {
+        "name": "open"
+      },
+      {
+        "name": "layout",
+        "type": "enum",
+        "values": [ "amp-sidebar", "nodisplay" ]
+      }
+    ]
+  },
+  {
+    "name": "amp-3q-player",
+    "description": "Embeds videos from 3Q SDN.",
+    "attributes": [
+      {
+        "name": "data-id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "autoplay"
+      },
+      {
+        "name": "_common_"
+      }
+    ]
+  },
+  {
+    "name": "amp-anim",
+    "description": "A runtime-managed animated image, typically a GIF.",
+    "attributes": [
+      {
+        "name": "src",
+        "type": "string"
+      },
+      {
+        "name": "srcset",
+        "type": "string"
+      },
+      {
+        "name": "alt",
+        "type": "string"
+      },
+      {
+        "name": "attribution",
+        "type": "string"
+      },
+      {
+        "name": "_common_"
+      }
+    ]
+  },
+  {
+    "name": "amp-apester-media",
+    "description": "Displays a Apester smart unit."
+  },
+  {
+    "name": "amp-audio",
+    "description": "A replacement for the HTML5 audio tag. The amp-audio component is only to be used for direct HTML5 audio file embeds.",
+    "attributes": [
+      {
+        "name": "autoplay",
+        "description": "If present, the attribute implies that the audio will start playing as soon as it is ready."
+      },
+      {
+        "name": "loop",
+        "description": "If present, will automatically loop the audio back to the start upon reaching the end."
+      },
+      {
+        "name": "muted",
+        "description": "If present, will mute the audio by default."
+      },
+      {
+        "name": "_common_"
+      }
+    ]
+  },
+  {
+    "name": "amp-brid-player",
+    "description": "An amp-brid-player displays the Brid Player used in Brid.tv Video Platform.",
+    "attributes": [
+      {
+        "name": "autoplay"
+      },
+      {
+        "name": "_common_"
+      }
+    ]
+  },
+  {
+    "name": "amp-dailymotion",
+    "description": "Displays a Dailymotion video.",
+    "attributes": [
+      { "name": "autoplay" },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-hulu",
+    "description": "Displays a simple embedded Hulu video.",
+    "attributes": [
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-soundcloud",
+    "description": "Displays a Soundcloud clip.",
+    "attributes": [
+      { "name": "width" },
+      { "name": "height" }
+    ]
+  },
+  {
+    "name": "amp-video",
+    "description": "Displays a Soundcloud clip.",
+    "attributes": [
+      { "name": "src" },
+      { "name": "poster" },
+      { "name": "controls" },
+      { "name": "loop" },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-vimeo",
+    "description": "Displays a Vimeo video.",
+    "attributes": [
+      {
+        "name": "data-videoid",
+        "required": true
+      },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-youtube",
+    "description": "Displays a YouTube video.",
+    "attributes": [
+      { "name": "autoplay" },
+      { "name": "data-videoid" },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-fit-text",
+    "description": "Expands or shrinks its font size to fit the content within the space given to it.",
+    "attributes": [
+      { "name": "min-font-size" },
+      { "name": "max-font-size" },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-font",
+    "description": "Trigger and monitor the loading of custom fonts on AMP pages.",
+    "attributes": [
+      { "name": "font-family" },
+      { "name": "timeout" },
+      { "name": "font-weight" },
+      { "name": "font-style" },
+      { "name": "font-variant" },
+      { "name": "on-load-add-class" },
+      { "name": "on-load-remove-class" },
+      { "name": "on-error-add-class" },
+      { "name": "on-error-remove-class" },
+      {
+        "name": "layout",
+        "type": "enum",
+        "values": [ "nodisplay" ]
+      }
+    ]
+  },
+  {
+    "name": "amp-timeago",
+    "description": "Provides fuzzy timestamps by formatting dates as `*** time ago` (for example, 3 hours ago).",
+    "attributes": [
+      {
+        "name": "datetime",
+        "required": true
+      },
+      { "name": "locale" },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-facebook-comments",
+    "description": "Embeds the Facebook comments plugin.",
+    "attributes": [
+      {
+        "name": "data-href",
+        "required": true
+      },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-facebook-like",
+    "description": "Embeds the Facebook like button plugin.",
+    "attributes": [
+      {
+        "name": "data-href",
+        "required": true
+      },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-facebook",
+    "description": "Displays a Facebook post or video.",
+    "attributes": [
+      {
+        "name": "data-href",
+        "required": true
+      },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-instagram",
+    "description": "Displays an Instagram embed.",
+    "attributes": [
+      { "name": "data-shortcode" },
+      { "name": "data-captioned" },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-pinterest",
+    "description": "Displays a Pinterest widget, Pin It button, or Follow button.",
+    "attributes": [
+      {
+        "name": "data-do",
+        "required": true,
+        "type": "enum",
+        "values": [ "buttonPin", "buttonFollow", "embedPin" ]
+      }
+    ]
+  },
+  {
+    "name": "amp-reddit",
+    "description": "Displays a Reddit comment or post embed.",
+    "attributes": [
+      {
+        "name": "data-embedtype",
+        "required": true,
+        "type": "enum",
+        "values": [ "post", "comment" ]
+      },
+      {
+        "name": "data-src",
+        "required": true
+      },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-social-share",
+    "description": "Displays a social share button.",
+    "attributes": [
+      {
+        "name": "type",
+        "required": true
+      },
+      {
+        "name": "data-share-endpoint",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "amp-twitter",
+    "description": "Displays a Twitter Tweet.",
+    "attributes": [
+      {
+        "name": "data-tweetid",
+        "required": true
+      },
+      { "name": "_common_" }
+    ]
+  },
+  {
+    "name": "amp-vine",
+    "description": "Displays a Vine simple embed.",
+    "attributes": [
+      {
+        "name": "data-vineid",
+        "required": true
+      },
+      { "name": "_common_" }
+    ]
+  }
+]
